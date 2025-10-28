@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HiHome, HiCalendar, HiClock, HiFolderOpen, HiCheckCircle } from 'react-icons/hi';
+import { HiHome, HiCalendar, HiClock, HiFolderOpen, HiCheckCircle, HiCog } from 'react-icons/hi';
 import AddTaskModal from './AddTaskModal';
 
 const Sidebar = ({ isOpen, isCollapsed, onClose, activeSection, onSectionChange, counts, progress, onAddTask, onAddCategory }) => {
@@ -43,6 +43,12 @@ const Sidebar = ({ isOpen, isCollapsed, onClose, activeSection, onSectionChange,
       label: 'Completed',
       icon: HiCheckCircle,
       count: counts?.completed || 0
+    },
+    {
+      id: 'settings',
+      label: 'Settings',
+      icon: HiCog,
+      count: null
     }
   ];
 

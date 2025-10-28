@@ -14,7 +14,7 @@ const DarkModeToggle = () => {
       >
         <i className={`bi ${isDarkMode ? 'bi-sun-fill' : 'bi-moon-fill'} theme-icon`}></i>
         <span className="theme-label d-none d-md-inline ms-2">
-          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+          Toggle
         </span>
       </button>
     </div>

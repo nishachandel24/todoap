@@ -7,13 +7,17 @@
   background: transparent;
   border: 2px solid var(--bs-border-color);
   border-radius: 50px;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  white-space: nowrap;
+  min-width: 120px;
+  cursor: pointer;
 }
 
 .theme-toggle-btn:hover {
@@ -44,8 +48,9 @@
 }
 
 .theme-icon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .theme-toggle-btn:hover .theme-icon {
@@ -54,8 +59,21 @@
 
 .theme-label {
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Hide label on small screens */
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    min-width: 44px;
+    padding: 0.6rem;
+  }
+  
+  .theme-label {
+    display: none;
+  }
 }
 
 /* Smooth theme transition for all elements */
